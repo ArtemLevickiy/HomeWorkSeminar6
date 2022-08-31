@@ -7,7 +7,8 @@ void FillArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i, j] = new Random().NextDouble();
+            double N = new Random().NextDouble() + new Random().Next(0,10);
+            matr[i, j] = N;
         }
     }
 }
@@ -17,7 +18,8 @@ void PrintArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            Console.Write($"{matr[i, j]}\t");
+            double N = Math.Round(matr[i, j], 2);
+            Console.Write($"{N}\t");
         }
         Console.WriteLine();
     }
